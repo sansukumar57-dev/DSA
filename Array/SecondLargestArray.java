@@ -37,4 +37,34 @@ secondMax=arr[1];
 
 
     }
+
+    public static class MaxCount {
+
+            static int maxConsecBits(int[] arr) {
+                // code here
+                int count=1;
+                int maxCount=1;
+                int n=arr.length;
+                for(int i=1;i<n;i++){
+                    if(arr[i]==arr[i-1]){
+                        count++;
+                    }
+                    else{
+                        count=1;
+
+                    }
+
+                    if(count>maxCount){
+                        maxCount=count;
+                    }
+                }
+                return maxCount;
+
+            }
+        public static void main(String[] args) {
+            int[] arr={0, 1, 0, 1, 1, 1, 1};
+            System.out.println(maxConsecBits(arr));
+        }
+
+    }
 }
