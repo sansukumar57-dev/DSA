@@ -1,0 +1,56 @@
+package DSA.Array;
+import java.util.*;
+public class Union2SortedArray {
+
+
+
+        public static ArrayList<Integer> findUnion(int a[], int b[]) {
+            ArrayList<Integer> list = new ArrayList<>();
+
+            int i=0;
+            int j=0;
+
+            while(i<a.length && j<b.length){
+
+                if(a[i]==a[i-1]){
+                    i=i+1;
+                    continue;
+
+                }
+                if(b[j]==b[j-1]){
+                    j=j+1;
+                    continue;
+                }
+                if(a[i]==b[j]){
+
+                    list.add(a[i]);
+                    i=i+1;
+                    j=j+1;
+                }
+                else if(a[i]<b[j]){
+                    list.add(a[i]);
+                    i=i+1;
+                }
+                else if(a[i]>b[j]){
+                    list.add(b[j]);
+                    j=j+1;
+                }
+            }
+
+            while(i<a.length){
+                if (i==0||a[i]!=a[i-1]) {
+                    list.add(a[i]);
+                }
+                i++;
+            }
+            while(j<b.length){
+                if(j==0||b[j]!=b[j-1]){
+                    list.add(b[j]);
+                }
+                j++;
+            }
+
+            return list;
+        }
+
+}
