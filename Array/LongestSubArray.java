@@ -2,29 +2,30 @@ package DSA.Array;
 import java.util.HashMap;
 public class LongestSubArray {
 
-     static    int longestSubarray(int[] arr, int k) {
-            HashMap<Long, Integer> map = new HashMap<>();
-            long sum = 0;
-            int maxLen = 0;
+    // User function Template for Java
 
-            for (int i = 0; i < arr.length; i++) {
-                sum += arr[i];
 
-                if (sum == k) {
-                    maxLen = i + 1;
-                }
-
-                if (map.containsKey(sum - k)) {
-                    maxLen = Math.max(maxLen, i - map.get(sum - k));
-                }
-
-                if (!map.containsKey(sum)) {
-                    map.put(sum, i);
+      static int longestSubarray(int[] arr, int k) {
+            // code here
+            int maxLen=0;
+            for(int i=0;i<arr.length;i++){
+                int sum=0;
+                for(int j=i;j<arr.length;j++){
+                    sum+=arr[j];
+                    if(sum==k){
+                        int len=j-i+1;
+                        maxLen=Math.max(maxLen,len);
+                    }
                 }
             }
-
             return maxLen;
         }
+
+
+
+
+
+
     public static void main(String[] args) {
         int[] ar={1, 8, 7, 56, 90};
         System.out.println(LongestSubArray.longestSubarray(ar,56));
