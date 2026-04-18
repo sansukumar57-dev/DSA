@@ -1,0 +1,22 @@
+package DSA.String;
+
+import java.util.HashMap;
+class IsomorphicString {
+    public boolean isIsomorphic(String s, String t) {
+       if(s.length()!= t.length()) return false;
+
+        HashMap<Character,Character> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            if(map.containsKey(s.charAt(i))&&map.get(s.charAt(i))!=t.charAt(i)){
+                return false;
+            }else if(!map.containsKey(s.charAt(i)) && map.containsValue(t.charAt(i))){
+                return false;
+            }else{
+                map.put(s.charAt(i), t.charAt(i));
+            }
+        }
+
+        return true;
+    }
+}
