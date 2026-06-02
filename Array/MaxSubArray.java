@@ -1,28 +1,23 @@
 package DSA.Array;
 
 class MaxSubArray {
-    public int maxSubArray(int[] nums) {
+    public double findMaxAverage(int[] nums, int k) {
+
+        int windowSum = 0;
+
         
-        int msum = nums[0];
-         int sum = nums[0];
-         for(int i=1;i<nums.length;i++)
-         {
-             if(sum + nums[i]>= nums[i])
-             {
-                 sum += nums[i];
-             }
-             else
-             {
-                 sum = nums[i];
-             }
-             if(sum>msum)
-             {
-                 msum=sum;
-             }
-         }
-         System.out.println(msum);
-         
-        
-         return msum;
+        for (int i = 0; i < k; i++) {
+            windowSum += nums[i];
+        }
+
+        int maxSum = windowSum;
+
+       
+        for (int i = k; i < nums.length; i++) {
+            windowSum = windowSum - nums[i - k] + nums[i];
+            maxSum = Math.max(maxSum, windowSum);
+        }
+
+        return (double) maxSum / k;
     }
 }
