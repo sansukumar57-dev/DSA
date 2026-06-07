@@ -5,27 +5,25 @@ import java.util.Set;
 
 class IntersectionOfTwoArrrays {
     public int[] intersection(int[] nums1, int[] nums2) {
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
-        int i=0,j=0;
-Set<Integer> result = new HashSet<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] == nums2[j]) {
-                result.add(nums1[i]);
-                i++;
-                j++;
-            } else if (nums1[i] < nums2[j]) {
-                i++;
-            } else {
-                j++;
+        for (int num : nums1) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : nums2) {
+            if (map.containsKey(num)) {
+                set.add(num);
             }
         }
 
-        int[] res = new int[result.size()];
-        int k = 0;
-        for (int num : result) {
-            res[k++] = num;
+        int[] res = new int[set.size()];
+        int index = 0;
+
+        for (int num : set) {
+            res[index++] = num;
         }
 
         return res;
