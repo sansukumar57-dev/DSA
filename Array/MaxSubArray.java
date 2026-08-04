@@ -1,22 +1,13 @@
 package DSA.Array;
 
 class MaxSubArray {
-    int maxSubArray(int[] arr) {
-        // Code here
-        int c=0;
-        int msum=Integer.MIN_VALUE;
-        for(int i=0;i<arr.length;i++){
-            c+=arr[i];
-            if(c>msum){
-                msum=c;
-            }
-            if(c<0){
-                c=0;
-            }
-            
-           
-           
+    public int maxSubArray(int[] nums) {
+        int sum=nums[0];
+        int mSum=nums[0];
+        for(int i=1;i<nums.length;i++){
+            sum=Math.max(nums[i],sum+nums[i]);
+            mSum=Math.max(mSum,sum);
         }
-       return msum;
+        return mSum;
     }
 }
