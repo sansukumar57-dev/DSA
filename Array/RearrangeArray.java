@@ -3,7 +3,7 @@ package DSA.Array;
 class RearrangeArray {
     public int[] rearrangeArray(int[] nums) {
         int[] arr=new int[nums.length];
-        int pos=0,neg=1;
+        int pos=0,neg=1;;
 
         for(int num:nums){
             if(num>0){
