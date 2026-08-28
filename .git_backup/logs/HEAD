@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 13cf3d4a5f91a4da99d88ee61509ea5579e51bbe Sansukumar <sansukumar57@gmail.com> 1787849067 +0530	commit (initial): DSA
-13cf3d4a5f91a4da99d88ee61509ea5579e51bbe 7c0392f107cd7b6ab0f052a003a707180701beda Sansukumar <sansukumar57@gmail.com> 1787849308 +0530	commit: DSA
-7c0392f107cd7b6ab0f052a003a707180701beda 0000000000000000000000000000000000000000 Sansukumar <sansukumar57@gmail.com> 1787849328 +0530	Branch: renamed refs/heads/master to refs/heads/main
-0000000000000000000000000000000000000000 7c0392f107cd7b6ab0f052a003a707180701beda Sansukumar <sansukumar57@gmail.com> 1787849328 +0530	Branch: renamed refs/heads/master to refs/heads/main
-7c0392f107cd7b6ab0f052a003a707180701beda 11ba617d3ebcdb7d7842a7ebd3f75cefd6b4f58a Sansukumar <sansukumar57@gmail.com> 1787849423 +0530	pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
