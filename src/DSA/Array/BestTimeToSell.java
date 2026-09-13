@@ -2,20 +2,14 @@ package DSA.Array;
 
 class BestTimeToSell {
     public int maxProfit(int[] prices) {
-       int[] profit = new int[prices.length];
-
-        int min = prices[0];
+       int minPrice = prices[0];
+        int answer = 0;
 
         for (int i = 1; i < prices.length; i++) {
-
-            min = Math.min(min, prices[i]);
-
-            profit[i] = Math.max(
-                profit[i - 1],
-                prices[i] - min
-            );
+            answer = Math.max(answer, prices[i] - minPrice);
+            minPrice = Math.min(minPrice, prices[i]);
         }
 
-        return profit[prices.length - 1];
+        return answer;
     }
 }
