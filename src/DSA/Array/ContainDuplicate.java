@@ -7,14 +7,12 @@ class ContainDuplicate {
     public boolean containsDuplicate(int[] arr) {
         Set<Integer> seen = new HashSet<>();
 
-        for (int num : arr) {
+        for (int num:arr) {
             if (seen.contains(num)) {
                 return true;
             }
 
-            seen.add(num);
-        }
-
+            seen.add(num);}
         return false;
     }
 }
