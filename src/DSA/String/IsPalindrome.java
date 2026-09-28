@@ -2,20 +2,23 @@ package DSA.String;
 
 class IsPalindrome {
     public boolean isPalindrome(String s) {
-       
-     
+       String str = "";
 
- StringBuilder str = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
 
-        for (char c : s.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
-                str.append(Character.toLowerCase(c));
+            char ch = s.charAt(i);
+
+            if (Character.isLetterOrDigit(ch)) {
+                str = str + Character.toLowerCase(ch);
             }
         }
 
-        String original = str.toString();
-        String reversed = str.reverse().toString();
+        String reverse = "";
 
-        return original.equals(reversed); 
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reverse = reverse + str.charAt(i);
+        }
+
+        return str.equals(reverse);
     }
 }
