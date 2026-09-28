@@ -4,7 +4,7 @@ class IsPalindrome {
     public boolean isPalindrome(String s) {
        String str = "";
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0;i< s.length(); i++) {
 
             char ch = s.charAt(i);
 
