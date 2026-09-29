@@ -8,7 +8,7 @@ class CanConstruct {
             count[c-'a']++;
         }
 
-        for(char c:ransomNote.toCharArray()) {
+        for(char c:ransomNote.toCharArray()){
             count[c - 'a']--;
 
             if (count[c - 'a'] < 0) {
