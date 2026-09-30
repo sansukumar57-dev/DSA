@@ -1,5 +1,7 @@
 package DSA.String;
 
+import java.util.HashMap;
+
 class WordPattern {
     public boolean wordPattern(String pattern, String s) {
          String[] words = s.split(" ");
