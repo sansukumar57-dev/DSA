@@ -5,7 +5,7 @@ class WordPattern {
          String[] words = s.split(" ");
         if (pattern.length() != words.length) return false;
 
-        Map<Character, Integer> pMap = new HashMap<>();
+        Map<Character,Integer> pMap = new HashMap<>();
         Map<String,Integer> wMap = new HashMap<>();
 
         for (int i = 0; i < pattern.length(); i++) {
