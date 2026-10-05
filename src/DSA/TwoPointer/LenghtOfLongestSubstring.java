@@ -1,5 +1,8 @@
 package DSA.TwoPointer;
 
+import java.util.HashSet;
+import java.util.Set;
+
 class LenghtOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
@@ -8,7 +11,6 @@ class LenghtOfLongestSubstring {
         int maxLength = 0;
 
         for (int right = 0; right < s.length(); right++) {
-
             while (set.contains(s.charAt(right))) {
                 set.remove(s.charAt(left));
                 left++;
