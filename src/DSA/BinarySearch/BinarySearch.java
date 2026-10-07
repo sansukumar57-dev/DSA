@@ -1,5 +1,4 @@
 package DSA.BinarySearch;
-
 class  BinarySearch {
     public int search(int[] nums, int target) {
         int left = 0;
@@ -16,7 +15,6 @@ class  BinarySearch {
                 right = mid - 1;
             }
         }
-
         return -1;
     }
 }
