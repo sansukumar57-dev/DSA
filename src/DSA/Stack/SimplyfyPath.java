@@ -1,6 +1,7 @@
 package DSA.Stack;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 class SimplyfyPath {
     public String simplifyPath(String path) {
