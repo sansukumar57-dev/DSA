@@ -1,5 +1,7 @@
 package DSA.Stack;
 
+import java.util.ArrayDeque;
+
 class SimplyfyPath {
     public String simplifyPath(String path) {
         Deque<String> stack = new ArrayDeque<>();
