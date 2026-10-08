@@ -1,5 +1,6 @@
 package DSA.Stack;
 
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -11,7 +12,6 @@ class SimplyfyPath {
             if (part.equals("") || part.equals(".")) {
                 continue;
             }
-
             if (part.equals("..")) {
                 if (!stack.isEmpty()) {
                     stack.pollLast();
@@ -20,7 +20,6 @@ class SimplyfyPath {
                 stack.offerLast(part);
             }
         }
-
         return "/" + String.join("/", stack);
     }
 }
