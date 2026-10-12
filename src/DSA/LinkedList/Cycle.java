@@ -13,7 +13,6 @@ public class Cycle {
                 return true;          
             }
         }
-
         return false;                   // No cycle
     }
 }
