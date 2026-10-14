@@ -7,6 +7,7 @@ class SameTree {
         if (p == null || q == null) {
             return false;
         }
+
         if (p.val != q.val) {
             return false;
         }
