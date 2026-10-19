@@ -1,5 +1,5 @@
 package DSA.Tree;
-class PathSum {
+class PathSu{
     public boolean hasPathSum(TreeNode root, int targetSum) {
         if (root == null) {
             return false;
