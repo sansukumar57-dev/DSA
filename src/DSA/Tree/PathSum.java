@@ -11,5 +11,4 @@ class PathSum {
         return hasPathSum(root.left, remaining)
                 || hasPathSum(root.right, remaining);
     }
-
 }
