@@ -9,7 +9,6 @@ class PathSum {
             return targetSum == root.val;
         }
         int remaining = targetSum - root.val;
-
         return hasPathSum(root.left, remaining)
                 || hasPathSum(root.right, remaining);
     }
