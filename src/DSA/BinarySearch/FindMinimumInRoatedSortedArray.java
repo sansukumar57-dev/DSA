@@ -7,7 +7,6 @@ class FindMinimumInRoatedSortedArray {
                 return nums[i + 1];
             }
         }
-
         return nums[0];
     }
 }
