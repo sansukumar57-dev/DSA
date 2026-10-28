@@ -1,18 +1,26 @@
 package DSA.Tree;
 
 class TreeNode {
-    public TreeNode invertTree(TreeNode root) {
-        if (root == null) {
+    
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return buildTree(nums, 0, nums.length - 1);
+    }
+
+    private TreeNode buildTree(int[] nums, int left, int right) {
+        if (left > right) {
             return null;
         }
 
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
+        // Choose the middle element as the root
+        int mid = left + (right - left) / 2;
 
-        invertTree(root.left);
-        invertTree(root.right);
+        TreeNode root = new TreeNode(nums[mid]);
+
+        // Build the left and right subtrees
+        root.left = buildTree(nums, left, mid - 1);
+        root.right = buildTree(nums, mid + 1, right);
 
         return root;
+    
     }
 }
