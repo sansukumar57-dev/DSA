@@ -1,7 +1,7 @@
 package DSA.Tree;
 
 class TreeNode {
-    
+
     public TreeNode sortedArrayToBST(int[] nums) {
         return buildTree(nums, 0, nums.length - 1);
     }
@@ -21,6 +21,6 @@ class TreeNode {
         root.right = buildTree(nums, mid + 1, right);
 
         return root;
-    
+
     }
 }
