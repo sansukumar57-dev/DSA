@@ -16,7 +16,6 @@ class Diameter {
         int rightHeight = height(node.right);
 
         diameter = Math.max(diameter, leftHeight + rightHeight);
-
         return 1 + Math.max(leftHeight, rightHeight);
     }
 }
