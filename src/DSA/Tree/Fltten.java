@@ -12,7 +12,6 @@ class Fltten {
 
         root.right = prev;
         root.left = null;
-
         prev = root;
     }
 }
