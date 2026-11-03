@@ -1,5 +1,7 @@
 package DSA.Array;
 
+import java.util.Arrays;
+
 class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums);
