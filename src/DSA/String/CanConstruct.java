@@ -4,9 +4,7 @@ import java.util.HashMap;
 
 class CanConstruct {
     public boolean canConstruct(String ransomNote, String magazine) {
-
         HashMap<Character, Integer> m = new HashMap<>();
-
         for (char c : ransomNote.toCharArray()) {
             m.put(c, m.getOrDefault(c, 0) + 1);
         }
