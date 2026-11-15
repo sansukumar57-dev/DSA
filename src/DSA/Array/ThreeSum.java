@@ -1,30 +1,34 @@
 package DSA.Array;
 
+import java.util.*;
+
 class ThreeSum {
-    public int threeSumClosest(int[] nums, int target) {
+    public List<List<Integer>> threeSum(int[] nums) {
 
-        int closest = nums[0] + nums[1] + nums[2];
+        Set<List<Integer>> set = new HashSet<>();
 
-        for (int i = 0; i < nums.length - 2; i++) {
+        int n = nums.length;
 
-            for (int j = i + 1; j < nums.length - 1; j++) {
+        for (int i = 0; i < n; i++) {
 
-                for (int k = j + 1; k < nums.length; k++) {
+            for (int j = i + 1; j < n; j++) {
 
-                    int sum = nums[i] + nums[j] + nums[k];
+                for (int k = j + 1; k < n; k++) {
 
-                    if (Math.abs(sum - target) <
-                        Math.abs(closest - target)) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
 
-                        closest = sum;
-   
-                    if (sum == target) {
-                        return sum;
+                        List<Integer> triplet = Arrays.asList(
+                            nums[i], nums[j], nums[k]
+                        );
+
+                        Collections.sort(triplet);
+
+                        set.add(triplet);
                     }
                 }
             }
         }
 
-        return closest;
+        return new ArrayList<>(set);
     }
 }
