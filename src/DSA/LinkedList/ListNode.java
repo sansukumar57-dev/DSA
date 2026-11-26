@@ -1,8 +1,7 @@
 package DSA.LinkedList;
 
-class ListNode {
+class Listnode {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-
         ListNode dummy = new ListNode(-1);
         ListNode current = dummy;
 
@@ -19,6 +18,7 @@ class ListNode {
             current = current.next;
         }
 
+        // Attach remaining nodes
         if (list1 != null) {
             current.next = list1;
         } else {
