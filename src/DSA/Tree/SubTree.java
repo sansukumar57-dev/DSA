@@ -10,7 +10,6 @@ class SubTree {
         if (isSameTree(root, subRoot)) {
             return true;
         }
-
         return isSubtree(root.left, subRoot) ||
                isSubtree(root.right, subRoot);
     }
