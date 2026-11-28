@@ -6,7 +6,6 @@ class SubTree {
         if (root == null) {
             return false;
         }
-
         if (isSameTree(root, subRoot)) {
             return true;
         }
