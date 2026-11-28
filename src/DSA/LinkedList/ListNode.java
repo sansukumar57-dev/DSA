@@ -10,7 +10,6 @@ public class ListNode {
             if (slow == fast) {             return true;
             }
         }
-
         return false;
     }
 }
